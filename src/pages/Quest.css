@@ -1,0 +1,438 @@
+.quest-page {
+  position: relative;
+  min-height: 100vh;
+  z-index: 10;
+}
+
+/* DeFi 포트폴리오 현황 */
+.defi-portfolio {
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.portfolio-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.portfolio-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #4CAF50;
+  margin-bottom: 10px;
+}
+
+.total-value {
+  font-size: 24px;
+  font-weight: bold;
+  color: #FFD700;
+  margin-bottom: 5px;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.portfolio-item {
+  background: rgba(255,255,255,0.1);
+  padding: 12px 8px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.portfolio-icon {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.portfolio-amount {
+  font-size: 12px;
+  font-weight: bold;
+  color: #4CAF50;
+}
+
+.portfolio-label {
+  font-size: 9px;
+  opacity: 0.8;
+}
+
+.portfolio-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 8px;
+}
+
+.defi-btn {
+  background: linear-gradient(45deg, #4CAF50, #8BC34A);
+  border: none;
+  color: white;
+  padding: 8px;
+  border-radius: 8px;
+  font-size: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.defi-btn:hover {
+  transform: translateY(-2px);
+}
+
+.defi-btn.lp {
+  background: linear-gradient(45deg, #2196F3, #03DAC6);
+}
+
+.defi-btn.lending {
+  background: linear-gradient(45deg, #FF9800, #FF5722);
+}
+
+/* 특별 이벤트 배너 */
+.special-event {
+  background: linear-gradient(135deg, #9C27B0, #E91E63);
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.event-sparkle {
+  position: absolute;
+  color: rgba(255,255,255,0.6);
+  animation: sparkle 2s infinite;
+}
+
+.event-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.event-description {
+  font-size: 12px;
+  opacity: 0.9;
+  margin-bottom: 10px;
+}
+
+.event-timer {
+  font-size: 14px;
+  font-weight: bold;
+  color: #FFD700;
+}
+
+/* 퀘스트 탭 */
+.quest-tabs {
+  display: flex;
+  margin-bottom: 20px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 15px;
+  padding: 5px;
+  backdrop-filter: blur(20px);
+}
+
+.quest-tab {
+  flex: 1;
+  background: none;
+  border: none;
+  color: white;
+  padding: 10px 8px;
+  border-radius: 10px;
+  font-size: 11px;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-align: center;
+}
+
+.quest-tab.active {
+  background: rgba(255,255,255,0.2);
+  font-weight: bold;
+}
+
+/* 퀘스트 섹션 */
+.quest-section {
+  display: block;
+}
+
+.quest-card {
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 18px;
+  margin-bottom: 15px;
+  border: 1px solid rgba(255,255,255,0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.quest-card.completed {
+  border-color: #4CAF50;
+  background: linear-gradient(135deg, rgba(76, 175, 80, 0.2), rgba(139, 195, 74, 0.1));
+}
+
+.quest-card.in-progress {
+  border-color: #FF9800;
+  background: linear-gradient(135deg, rgba(255, 152, 0, 0.2), rgba(255, 87, 34, 0.1));
+}
+
+.quest-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.quest-type-badge {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.quest-type-badge.daily {
+  background: linear-gradient(45deg, #4CAF50, #8BC34A);
+}
+
+.quest-type-badge.weekly {
+  background: linear-gradient(45deg, #2196F3, #03DAC6);
+}
+
+.quest-type-badge.special {
+  background: linear-gradient(45deg, #FF9800, #FF5722);
+}
+
+.quest-type-badge.legendary {
+  background: linear-gradient(45deg, #9C27B0, #E91E63);
+}
+
+.quest-status-icon {
+  font-size: 18px;
+}
+
+.status-completed {
+  color: #4CAF50;
+}
+
+.status-progress {
+  color: #FF9800;
+  animation: pulse 2s infinite;
+}
+
+.status-locked {
+  color: rgba(255,255,255,0.4);
+}
+
+.quest-title {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.quest-description {
+  font-size: 11px;
+  opacity: 0.9;
+  line-height: 1.4;
+  margin-bottom: 12px;
+}
+
+/* DeFi 옵션 선택 */
+.defi-options {
+  display: none;
+  margin-bottom: 12px;
+}
+
+.defi-options.show {
+  display: block;
+}
+
+.option-selector {
+  background: rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.option-header {
+  font-size: 11px;
+  font-weight: bold;
+  color: #FFD700;
+  margin-bottom: 8px;
+}
+
+.option-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 6px;
+}
+
+.option-btn {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 8px;
+  padding: 8px 6px;
+  color: white;
+  font-size: 9px;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-align: center;
+}
+
+.option-btn:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+.option-btn.selected {
+  border-color: #4CAF50;
+  background: rgba(76, 175, 80, 0.3);
+}
+
+.option-details {
+  font-size: 8px;
+  opacity: 0.8;
+  margin-top: 3px;
+}
+
+.quest-progress {
+  margin-bottom: 12px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 6px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 6px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #4CAF50, #8BC34A);
+  transition: width 0.3s ease;
+}
+
+.progress-text {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  opacity: 0.8;
+}
+
+.quest-reward {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 215, 0, 0.2);
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+.reward-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.reward-icon {
+  font-size: 20px;
+}
+
+.reward-details {
+  flex: 1;
+}
+
+.reward-name {
+  font-size: 12px;
+  font-weight: bold;
+  color: #FFD700;
+}
+
+.reward-value {
+  font-size: 10px;
+  opacity: 0.9;
+}
+
+.claim-btn {
+  background: linear-gradient(45deg, #FFD700, #FFA000);
+  border: none;
+  color: #333;
+  padding: 6px 12px;
+  border-radius: 10px;
+  font-size: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.claim-btn:hover {
+  transform: scale(1.05);
+}
+
+.claim-btn:disabled {
+  background: rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.6);
+  cursor: not-allowed;
+}
+
+.select-btn {
+  background: linear-gradient(45deg, #2196F3, #03DAC6);
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 10px;
+  font-size: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.select-btn:hover {
+  transform: scale(1.05);
+}
+
+/* 모달 */
+.defi-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  padding: 25px;
+  border-radius: 20px;
+  max-width: 90vw;
+  width: 320px;
+  border: 1px solid rgba(255,255,255,0.2);
+  text-align: center;
+}
+
+/* 반응형 */
+@media (max-width: 320px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .quest-tabs {
+    overflow-x: auto;
+  }
+  
+  .option-buttons {
+    grid-template-columns: 1fr;
+  }
+}

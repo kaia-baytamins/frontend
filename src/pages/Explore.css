@@ -1,0 +1,515 @@
+.explore-page {
+  background: linear-gradient(180deg, #0a0e27 0%, #1a1a2e 50%, #16213e 100%);
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+/* 별 배경 */
+.explore-stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.explore-star {
+  position: absolute;
+  color: rgba(255,255,255,0.8);
+  animation: twinkle 3s infinite;
+}
+
+/* 전체 컨테이너 */
+.space-container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+}
+
+/* 왼쪽 사이드바 */
+.sidebar {
+  width: 80px;
+  height: 100vh;
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(10px);
+  border-right: 1px solid rgba(255,255,255,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+  z-index: 50;
+}
+
+.sidebar-tab {
+  width: 60px;
+  height: 60px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.sidebar-tab:hover {
+  background: rgba(255,255,255,0.2);
+  transform: translateX(5px);
+}
+
+.sidebar-tab.active {
+  background: linear-gradient(45deg, #4CAF50, #8BC34A);
+  border-color: #4CAF50;
+  box-shadow: 0 0 20px rgba(76, 175, 80, 0.4);
+}
+
+.tab-icon {
+  font-size: 24px;
+  margin-bottom: 3px;
+}
+
+.tab-label {
+  font-size: 8px;
+  text-align: center;
+  line-height: 1;
+}
+
+/* 메인 콘텐츠 영역 */
+.main-content {
+  flex: 1;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 헤더 */
+.space-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: rgba(0,0,0,0.3);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  z-index: 40;
+}
+
+.space-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #FFD700;
+}
+
+.space-stats {
+  display: flex;
+  gap: 15px;
+  font-size: 12px;
+}
+
+.stat-item {
+  background: rgba(255,255,255,0.1);
+  padding: 5px 10px;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+}
+
+/* 우주 공간 */
+.space-area {
+  height: 200px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at center, rgba(76, 175, 80, 0.1) 0%, transparent 50%);
+}
+
+/* 우주선과 펫 */
+.spaceship-center {
+  position: relative;
+  z-index: 20;
+}
+
+.spaceship {
+  width: 120px;
+  height: 80px;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  border-radius: 40px 15px 40px 15px;
+  position: relative;
+  box-shadow: 0 10px 40px rgba(102, 126, 234, 0.4);
+  animation: float 4s ease-in-out infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.spaceship:hover {
+  transform: scale(1.05);
+}
+
+.pet-in-ship {
+  font-size: 35px;
+  animation: wave 2s ease-in-out infinite;
+}
+
+/* 장착된 NFT 표시 */
+.equipped-nfts {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 5px;
+}
+
+.equipped-nft {
+  width: 25px;
+  height: 25px;
+  background: rgba(255, 215, 0, 0.3);
+  border: 1px solid #FFD700;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+/* 콘텐츠 섹션들 */
+.content-section {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* 발사기지 콘텐츠 */
+.launch-pad {
+  text-align: center;
+}
+
+.launch-status {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.status-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #4CAF50;
+}
+
+.ship-specs {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.spec-item {
+  background: rgba(255,255,255,0.1);
+  padding: 12px 8px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.spec-value {
+  font-size: 18px;
+  font-weight: bold;
+  color: #FFD700;
+}
+
+.spec-label {
+  font-size: 11px;
+  opacity: 0.8;
+  margin-top: 3px;
+}
+
+.explore-btn {
+  width: 100%;
+  background: linear-gradient(45deg, #FF6B6B, #4ECDC4);
+  border: none;
+  color: white;
+  padding: 18px;
+  border-radius: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 5px 20px rgba(255, 107, 107, 0.3);
+}
+
+.explore-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(255, 107, 107, 0.5);
+}
+
+.explore-btn.staking {
+  background: linear-gradient(45deg, #FFD700, #FF6B6B);
+}
+
+.explore-btn.inventory {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+}
+
+/* 펫 훈련 콘텐츠 */
+.pet-training {
+  text-align: center;
+}
+
+.pet-status {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.pet-avatar-large {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #FF6B6B, #4ECDC4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  margin: 0 auto 15px;
+  animation: float 3s ease-in-out infinite;
+}
+
+.pet-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.training-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.training-btn {
+  background: linear-gradient(45deg, #4CAF50, #8BC34A);
+  border: none;
+  color: white;
+  padding: 12px;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.training-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* 우주선 정비 콘텐츠 */
+.ship-garage {
+  text-align: center;
+}
+
+.equipment-slots {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.equipment-slot {
+  background: rgba(255,255,255,0.1);
+  border: 2px dashed rgba(255,255,255,0.3);
+  border-radius: 15px;
+  padding: 15px 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.equipment-slot.equipped {
+  background: linear-gradient(45deg, rgba(76, 175, 80, 0.2), rgba(139, 195, 74, 0.2));
+  border: 2px solid rgba(76, 175, 80, 0.5);
+  border-style: solid;
+}
+
+.slot-icon {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.slot-label {
+  font-size: 11px;
+  opacity: 0.8;
+}
+
+.slot-name {
+  font-size: 10px;
+  font-weight: bold;
+  color: #4CAF50;
+  margin-top: 3px;
+}
+
+/* 행성 선택 모달 */
+.planet-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  border-radius: 20px;
+  padding: 25px 20px;
+  max-width: 90vw;
+  max-height: 80vh;
+  overflow-y: auto;
+  border: 1px solid rgba(255,255,255,0.2);
+  position: relative;
+}
+
+.modal-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.modal-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #FFD700;
+  margin-bottom: 10px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.close-btn:hover {
+  opacity: 1;
+}
+
+.planets-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.planet-card {
+  background: rgba(255,255,255,0.1);
+  border-radius: 15px;
+  padding: 15px 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  position: relative;
+}
+
+.planet-card.available {
+  border-color: rgba(76, 175, 80, 0.5);
+  background: linear-gradient(135deg, rgba(76, 175, 80, 0.2), rgba(139, 195, 74, 0.1));
+}
+
+.planet-card.available:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(76, 175, 80, 0.3);
+}
+
+.planet-card.locked {
+  opacity: 0.4;
+  cursor: not-allowed;
+  filter: grayscale(0.8);
+}
+
+.planet-icon {
+  font-size: 35px;
+  margin-bottom: 8px;
+}
+
+.planet-name {
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.planet-requirement {
+  font-size: 10px;
+  opacity: 0.8;
+  margin-bottom: 5px;
+}
+
+.planet-reward {
+  font-size: 9px;
+  background: rgba(255, 215, 0, 0.2);
+  padding: 3px 6px;
+  border-radius: 8px;
+  color: #FFD700;
+  font-weight: bold;
+}
+
+.lock-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 25px;
+  opacity: 0.8;
+}
+
+/* 반응형 */
+@media (max-width: 360px) {
+  .sidebar {
+    width: 70px;
+  }
+  
+  .sidebar-tab {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .spaceship {
+    width: 100px;
+    height: 70px;
+  }
+  
+  .pet-in-ship {
+    font-size: 30px;
+  }
+}

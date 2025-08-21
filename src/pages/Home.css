@@ -1,0 +1,301 @@
+.home-page {
+  position: relative;
+  min-height: 100vh;
+  z-index: 10;
+}
+
+/* 헤더 */
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* 내 프로필 카드 */
+.my-profile {
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(255,255,255,0.2);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.profile-pet {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #FF6B6B, #4ECDC4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.profile-info {
+  flex: 1;
+}
+
+.profile-name {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.profile-stats {
+  display: flex;
+  gap: 15px;
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+.profile-rank {
+  background: rgba(255, 215, 0, 0.2);
+  color: #FFD700;
+  padding: 4px 8px;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+/* 퀵 액션 버튼들 */
+.quick-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.quick-action {
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 15px;
+  padding: 15px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.quick-action:hover {
+  transform: translateY(-3px);
+  background: rgba(255,255,255,0.2);
+}
+
+.action-icon {
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+
+.action-text {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* 리더보드 섹션 */
+.leaderboard-section {
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.section-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFD700;
+}
+
+.tab-switch {
+  display: flex;
+  background: rgba(255,255,255,0.1);
+  border-radius: 20px;
+  padding: 3px;
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 17px;
+  font-size: 11px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: 500;
+}
+
+.tab-btn.active {
+  background: rgba(255,255,255,0.2);
+  font-weight: bold;
+}
+
+.leaderboard-tabs {
+  display: flex;
+  margin-bottom: 15px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 15px;
+  padding: 5px;
+}
+
+.board-tab {
+  flex: 1;
+  background: none;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.board-tab.active {
+  background: rgba(255,255,255,0.2);
+  font-weight: bold;
+}
+
+/* 리더보드 아이템 */
+.leaderboard-item {
+  display: flex;
+  align-items: center;
+  background: rgba(255,255,255,0.1);
+  padding: 12px 15px;
+  border-radius: 15px;
+  margin-bottom: 8px;
+  transition: transform 0.2s;
+}
+
+.leaderboard-item:hover {
+  transform: translateX(5px);
+  background: rgba(255,255,255,0.15);
+}
+
+.leaderboard-item.me {
+  border: 2px solid #FFD700;
+  background: rgba(255, 215, 0, 0.15);
+}
+
+.rank-number {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 12px;
+  margin-right: 12px;
+}
+
+.rank-1 { background: linear-gradient(45deg, #FFD700, #FFA000); }
+.rank-2 { background: linear-gradient(45deg, #C0C0C0, #808080); }
+.rank-3 { background: linear-gradient(45deg, #CD7F32, #8B4513); }
+.rank-other { background: rgba(255,255,255,0.2); }
+
+.player-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #4ECDC4, #44A08D);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin-right: 12px;
+  border: 2px solid rgba(255,255,255,0.3);
+}
+
+.player-info {
+  flex: 1;
+}
+
+.player-name {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+.player-subtitle {
+  font-size: 11px;
+  opacity: 0.8;
+}
+
+.player-score {
+  font-size: 14px;
+  font-weight: bold;
+  color: #4CAF50;
+}
+
+/* 친구 요청 섹션 */
+.friend-requests {
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.friend-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.friend-item:last-child {
+  border-bottom: none;
+}
+
+.friend-avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #FF6B6B, #4ECDC4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.friend-info {
+  flex: 1;
+  font-size: 13px;
+}
+
+.friend-name {
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+
+.friend-status {
+  opacity: 0.7;
+  font-size: 11px;
+}
+
+.friend-btn {
+  background: linear-gradient(45deg, #4CAF50, #8BC34A);
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 15px;
+  font-size: 11px;
+  font-weight: bold;
+  cursor: pointer;
+}
